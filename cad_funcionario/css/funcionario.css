@@ -1,0 +1,33 @@
+﻿div.formulario_funcionario{
+	font-family: Agency FB;
+}
+div.formulario_funcionario h2{
+	margin-left: 100px;
+	font-family: Agency FB;
+}
+form.cadastro_funcionario div{
+	float:left;
+}
+form.cadastro_funcionario{
+	width: 500px;
+	height: 200px;
+	margin: 10px auto 10px auto;
+}
+
+form.cadastro_funcionario div div{
+	width: 150px;
+	float: left;
+	margin-right: 15px;
+	padding-bottom: 10px;
+}
+input.funcionario_padrao{
+	width: 150px;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+}
+div.funcionario_botao{
+	margin-top: 10px;
+	font-family: Agency FB;
+	font-size: 17px;
+	float: left;
+}

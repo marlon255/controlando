@@ -1,0 +1,56 @@
+/* MODELAÇÃO UNIVERSAL */
+a{
+	text-decoration: none;
+	color: #FFF;
+}
+/* Estilo do menu */
+h4{
+	margin: 0;
+	padding: 0;
+}
+nav.menu_lateral{
+	height: 100px;
+	width: 150px;
+	display: block;
+	float: left;
+}
+nav.menu_lateral ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: Agency FB;
+	font-size: 17pt;
+	color: #FFF;
+	background-color: rgb(165,165,165);
+	border-radius: 3px;
+}
+.menu_lateral li{
+	cursor: pointer;
+}
+/* Mudoficando Menu Houver */
+ul.sub_menu{
+	width: 0px;
+	height: 0px;
+}
+ul.sub_menu li{
+	display: none;
+	position: relative;
+	left: 130px;
+	top: -29px;
+	width: 150px;
+	background: rgb(165,165,165);
+	padding: 0 0 0 20;
+}
+li.menu_item{
+	padding: 0 0 0 20;
+
+}
+li.menu_item:hover{
+	background-color: #1E90FF;
+}
+li.menu_item:hover li{
+	display: block;
+}
+li.sub_menu_item:hover{
+	background-color: #1E90FF;
+}

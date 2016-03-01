@@ -1,0 +1,81 @@
+﻿/* Modelando Formulario de cadastro */
+div.formulario_filial{
+	font-family: Agency FB;
+}
+div.formulario_filial h2{
+	font-family: Agency FB;
+	margin-left: 100px;
+}
+form.cadastro_filial{
+	width: 500px;
+	height: 200px;
+	margin: 10px auto 0px auto;	
+}
+form.cadastro_filial div{
+	width: 150px;
+	float: left;
+	margin-right: 15px;
+	padding-bottom: 10px;
+}
+input.filial_padrao{
+	width: 150px;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+}
+input.botao_filial{
+	margin-top: 10px;
+	font-family: Agency FB;
+	font-size: 17px;
+}
+/* Modelando Exibição de itens cadastrados */
+/*Fundo da exibição */
+div.fundo_filial{
+	margin: -50px auto 0 auto;
+	width: 90%;
+	height: 350px;
+	background: rgb(215,215,215);
+	overflow: scroll;
+}
+/* LISTA CADASTRADA */
+div.cabecalho_exibir{
+	width: 1100px;
+	float: left;
+	
+}
+div.cabecalho_exibir ul{
+	list-style-type: none;
+	margin: 5px 0px 0px 5px;
+	padding: 0px;
+}
+div.cabecalho_exibir li{
+	width: 140px;
+	float: left;
+	padding-right: 15px;
+	border-right: 1px dotted black;
+	border-bottom: 1px dotted black;
+	
+}
+/* INPUT's DE Exibição */
+div.exibir_filial{
+	width:1120px;
+	float: left;
+	margin: 1px 0px 0px 5px;
+	height: 22px;
+}
+div.exibir_filial form{
+	margin: -15px 0px 0px 0px;
+}
+div.exibir_filial input.Ifilial{
+	width: 150px;
+	margin: 2px;
+}
+
+
+
+
+
+
+
+
+
+

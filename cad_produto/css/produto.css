@@ -1,0 +1,38 @@
+﻿div.formulario_produto{
+	font-family: Agency FB;
+}
+div.formulario_produto h2{
+	margin-left: 100px;
+	font-family: Agency FB;
+}
+form.cadastro_produto div{
+	float:left;
+}
+form.cadastro_produto{
+	width: 500px;
+	height: 200px;
+	margin: 10px auto 10px auto;
+}
+
+form.cadastro_produto div div{
+	width: 150px;
+	float: left;
+	margin-right: 15px;
+	padding-bottom: 10px;
+}
+input.produto_padrao{
+	width: 150px;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+}
+select.produto_padrao{
+	width: 150px;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+}
+div.produto_botao{
+	margin-top: 10px;
+	font-family: Agency FB;
+	font-size: 17px;
+	float: left;
+}

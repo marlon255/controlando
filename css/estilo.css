@@ -1,0 +1,94 @@
+﻿/* MODELAÇÃO UNIVERSAL */
+a{
+	text-decoration: none;
+}/* Modelando CABEÇALHO */
+div.cabecalho{
+	width: 100%;
+	height: 75px;
+	margin: -8px 0px 10px 0px;
+	-webkit-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+	-moz-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+	box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+}
+/* Modelando parte do cabeçalho, LOGOMARCA */
+div.logo{
+	width: 10%;
+	height: 75px;
+	display: block;
+	float: left;
+	background: url("../img/logo.jpg") no-repeat;
+	background-size: 118px 75px;
+}
+/* Modelando parte do cabeçalho, CABEÇALHO */
+div.topo_cabecalho{
+	width: 65%;
+	font-family: Agency FB;
+	font-size: 30px;
+	float: left;
+	margin-top: 20px;
+}
+/* Modelando parte do cabeçalho, INFORMAÇÕES DO USUARIO */
+div.user{
+	width: 25%;
+	height: 75px;
+	display: block;
+	float: left;
+	
+}
+/* Modelando informações do usuario logado */
+div.info_user{
+	width: 170px;
+	height: 75px;
+	float:right;
+	text-align: center;
+	margin-top: 16px;
+	font-family: Agency FB;
+	font-size: 17px;
+}
+/* Modelando imagem do usuario */
+div.img_user{
+	width: 55px;
+	height: 55px;
+	border: 3px solid rgba(169,169,169,1);
+	border-radius: 50px;
+	float: right;
+	margin-top: 8px;
+	margin-right: 8px;
+	background: url("../img/user.png") no-repeat;
+	background-size: 55px 55px;
+}
+/* Modelando IFRAME */
+iframe{
+	height: 700px;
+	width: 900px;
+	margin: 0px 0px 15px 200px;
+	border: 1px solid rgba(135,135,135,0.5);
+	-webkit-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+	-moz-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+	box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+}
+
+
+/* Modelando rodapé */
+div.rodape{
+	border-top: 1px solid rgba(169,169,169,1);
+	width: 99%;
+}
+div.rodape h1{
+	font-size: 17px;
+	font-weight: normal;
+	text-align: center;
+	font-family: Agency FB;
+}
+div.rodape a:link{
+	text-decoration: none;
+	font-size: 17px;
+	font-family: Agency FB;
+	color: black;
+}
+div.rodape h2{
+	font-size: 17px;
+	font-weight: normal;
+	text-align: center;
+	font-family: Agency FB;
+}
