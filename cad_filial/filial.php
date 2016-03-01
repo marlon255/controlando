@@ -59,7 +59,7 @@
 		do{
 ?>
 <?php
-	require ('php/editar.php'); require ('php/salvar.php');
+	require ('php/editar.php'); require ('php/salvar.php'); require ('php/deletar.php');
 ?>
 			<form method="POST">
 				<input type="hidden" name="id_cad_filial" id="id_cad_filial" value="<?=$exibir_filial_php['id']?>" />
