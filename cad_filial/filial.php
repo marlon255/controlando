@@ -62,7 +62,7 @@
 	require ('php/editar.php'); require ('php/salvar.php');
 ?>
 			<form method="POST">
-				<input type="hidden" name="id_cad_filial" id="id_cad_filial" />
+				<input type="hidden" name="id_cad_filial" id="id_cad_filial" value="<?=$exibir_filial_php['id']?>" />
 				<input type="text" name="exibir_filial_cnpj<?=$exibir_filial_php['id']?>" id="exibir_filial_cnpj<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['cnpj']?>" class="Ifilial" disabled />
 				<input type="text" name="exibir_filial_fantasia<?=$exibir_filial_php['id']?>" id="exibir_filial_fantasia<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['nome_fantas']?>" class="Ifilial" disabled />
 				<input type="text" name="exibir_filial_numero<?=$exibir_filial_php['id']?>" id="exibir_filial_numero<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['nume_filial']?>" class="Ifilial" disabled />

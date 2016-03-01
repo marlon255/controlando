@@ -15,7 +15,14 @@
 			   $cidade_new 		= $_POST['exibir_filial_cidade'.$exibir_filial_php['id']];
 			   $data_new 		= $_POST['exibir_filial_data'.$exibir_filial_php['id']];
 			   
-			   $sql_new = "UPDATE `controle`.`filial` SET cnpj='$cnpj_new', nome_fantas='$fantasia_new', nume_filial='$numero_new', estado='$estado_new', cidade='$cidade_new', data_abertura='$data_new' WHERE `filial`.`id` = '".$_POST['id_cad_filial']."'";
+			   $sql_new = "UPDATE `controle`.`filial` 
+			   SET cnpj='$cnpj_new', 
+			       nome_fantas='$fantasia_new', 
+				   nume_filial='$numero_new', 
+				   estado='$estado_new', 
+				   cidade='$cidade_new', 
+				   data_abertura='$data_new' 
+				   WHERE `filial`.`id` = ".$_POST['id_cad_filial'].";";
 			   $query_new = mysqli_query($conexao, $sql_new) or die(mysqli_error($conexao));
 			   echo "<script>location.href='filial.php';</script>";
 		   }
