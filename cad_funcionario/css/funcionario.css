@@ -25,6 +25,11 @@ input.funcionario_padrao{
 	border-radius: 2px;
 	border: 1px groove rgba(0,0,0,0.6);
 }
+select.funcionario_padrao{
+	width: 150px;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+}
 div.funcionario_botao{
 	margin-top: 10px;
 	font-family: Agency FB;
