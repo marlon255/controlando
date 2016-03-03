@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 02-Mar-2016 às 15:44
+-- Generation Time: 03-Mar-2016 às 20:15
 -- Versão do servidor: 5.6.20-log
 -- PHP Version: 5.4.31
 
@@ -34,15 +34,40 @@ CREATE TABLE IF NOT EXISTS `filial` (
   `estado` varchar(25) NOT NULL,
   `cidade` varchar(35) NOT NULL,
   `data_abertura` varchar(25) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Extraindo dados da tabela `filial`
 --
 
 INSERT INTO `filial` (`id`, `cnpj`, `nome_fantas`, `nume_filial`, `estado`, `cidade`, `data_abertura`) VALUES
-(7, 'p', '', '', '', '', ''),
-(6, 'k', '', '', '', '', '');
+(9, 's', 's', 's', 's', 's', 's');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `fornecedor`
+--
+
+CREATE TABLE IF NOT EXISTS `fornecedor` (
+`id` int(10) NOT NULL,
+  `cnpj` varchar(35) NOT NULL,
+  `social` varchar(35) NOT NULL,
+  `fantasia` varchar(35) NOT NULL,
+  `estadual` varchar(35) NOT NULL,
+  `municipal` varchar(35) NOT NULL,
+  `estado` varchar(35) NOT NULL,
+  `cidade` varchar(35) NOT NULL,
+  `telefone` varchar(35) NOT NULL,
+  `email` varchar(35) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `fornecedor`
+--
+
+INSERT INTO `fornecedor` (`id`, `cnpj`, `social`, `fantasia`, `estadual`, `municipal`, `estado`, `cidade`, `telefone`, `email`) VALUES
+(1, 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'd');
 
 -- --------------------------------------------------------
 
@@ -60,7 +85,16 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
   `endereco` varchar(65) NOT NULL,
   `filial` varchar(35) NOT NULL,
   `data` varchar(35) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Extraindo dados da tabela `funcionario`
+--
+
+INSERT INTO `funcionario` (`id`, `nome`, `cargo`, `nivel`, `cpf`, `telefone`, `endereco`, `filial`, `data`) VALUES
+(1, 's', 's', 0, 's', 's', 's', 's', 's'),
+(2, 'd', 'd', 0, 'd', 'd', 'd', 's', 'd'),
+(3, 'd', 'd', 0, 'd', 'd', 'd', 's', 'd');
 
 --
 -- Indexes for dumped tables
@@ -70,6 +104,12 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
 -- Indexes for table `filial`
 --
 ALTER TABLE `filial`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -86,12 +126,17 @@ ALTER TABLE `funcionario`
 -- AUTO_INCREMENT for table `filial`
 --
 ALTER TABLE `filial`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `fornecedor`
+--
+ALTER TABLE `fornecedor`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `funcionario`
 --
 ALTER TABLE `funcionario`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
