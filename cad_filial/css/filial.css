@@ -1,4 +1,4 @@
-﻿/* Modelando Formulario de cadastro */
+/* Modelando Formulario de cadastro */
 div.formulario_filial{
 	font-family: Agency FB;
 }
@@ -59,15 +59,15 @@ div.cabecalho_exibir li{
 div.exibir_filial{
 	width:1120px;
 	float: left;
-	margin: 1px 0px 0px 5px;
+	margin: 0px 0px 0px 2px;
 	height: 22px;
 }
 div.exibir_filial form{
-	margin: -15px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 div.exibir_filial input.Ifilial{
 	width: 150px;
-	margin: 2px;
+	margin: 2px 1px 0px 1px;
 }
 
 

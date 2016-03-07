@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if(isset($_POST['salvar_filial_button'.$exibir_filial_php['id']])){
 		if(empty($_POST['exibir_filial_cnpj'.$exibir_filial_php['id']])&&
 		   empty($_POST['exibir_filial_fantasia'.$exibir_filial_php['id']])&&

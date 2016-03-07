@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if(isset($_POST['botao_filial'])){
 		$cnpj = $_POST['cnpj_filial'];
 		$fantasia = $_POST['fantasia_filial'];

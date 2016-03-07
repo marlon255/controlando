@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 03-Mar-2016 às 20:15
+-- Generation Time: 07-Mar-2016 às 20:07
 -- Versão do servidor: 5.6.20-log
 -- PHP Version: 5.4.31
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
   `endereco` varchar(65) NOT NULL,
   `filial` varchar(35) NOT NULL,
   `data` varchar(35) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Extraindo dados da tabela `funcionario`
@@ -94,7 +94,34 @@ CREATE TABLE IF NOT EXISTS `funcionario` (
 INSERT INTO `funcionario` (`id`, `nome`, `cargo`, `nivel`, `cpf`, `telefone`, `endereco`, `filial`, `data`) VALUES
 (1, 's', 's', 0, 's', 's', 's', 's', 's'),
 (2, 'd', 'd', 0, 'd', 'd', 'd', 's', 'd'),
-(3, 'd', 'd', 0, 'd', 'd', 'd', 's', 'd');
+(3, 'd', 'd', 0, 'd', 'd', 'd', 's', 'd'),
+(4, '1', '1', 1, '1', '1', '1', 's', '1'),
+(5, 'a', 'a', 3, 'a', 'a', 'a', 's', 'a');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `produto`
+--
+
+CREATE TABLE IF NOT EXISTS `produto` (
+`id` int(15) NOT NULL,
+  `codigo` varchar(35) NOT NULL,
+  `descricao` varchar(35) NOT NULL,
+  `marca` varchar(35) NOT NULL,
+  `cor` varchar(35) NOT NULL,
+  `tamanho` varchar(35) NOT NULL,
+  `estoque` varchar(35) NOT NULL,
+  `preco` varchar(35) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id`, `codigo`, `descricao`, `marca`, `cor`, `tamanho`, `estoque`, `preco`) VALUES
+(1, '1', '1', '1', '1', '1', '1', '1'),
+(2, 'a', 'a', 'a', 'a', 'a', 'a', 'a');
 
 --
 -- Indexes for dumped tables
@@ -119,6 +146,12 @@ ALTER TABLE `funcionario`
  ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `produto`
+--
+ALTER TABLE `produto`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -136,7 +169,12 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 -- AUTO_INCREMENT for table `funcionario`
 --
 ALTER TABLE `funcionario`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `produto`
+--
+ALTER TABLE `produto`
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

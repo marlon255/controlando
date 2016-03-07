@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if(isset($_POST['cad_funcionario_button'])){
 		$nome = $_POST['cad_funcionario_name'];
 		$cargo = $_POST['cad_funcionario_cargo'];

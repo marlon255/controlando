@@ -1,9 +1,12 @@
-﻿<html>
+<html>
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/cliente.css">
 </head>
 <body>
+<?php
+
+?>
 	<div class="formulario_cliente">
 		<h2>Cadastro de Clientes</h2>
 		<form method="POST" id="" name="" class="cadastro_cliente">

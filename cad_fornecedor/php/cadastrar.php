@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	if(isset($_POST['cad_fornecedor_button'])){
 		$cnpj = $_POST['cad_fornecedor_cnpj'];
 		$social = $_POST['cad_fornecedor_social'];
