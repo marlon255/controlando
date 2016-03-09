@@ -1,5 +1,5 @@
 <script>
-$().ready(function() {
+$().ready(function editando() {
 	var cnpj = "#exibir_filial_cnpj<?=$exibir_filial_php['id']?>";
 	var fantasia = "#exibir_filial_fantasia<?=$exibir_filial_php['id']?>";
 	var numero = "#exibir_filial_numero<?=$exibir_filial_php['id']?>";

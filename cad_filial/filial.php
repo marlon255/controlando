@@ -9,6 +9,7 @@
 	include_once ('../php/conexao.php');
 	include_once ('php/cadastrar.php');
 	include_once ('php/exibir.php');
+	require_once ('php/editar.php');
 ?>
 	<div class="formulario_filial">
 		<h2>Filiais</h2>
@@ -59,7 +60,7 @@
 		do{
 ?>
 <?php
-	require ('php/editar.php'); require ('php/salvar.php'); require ('php/deletar.php');
+		require ('php/salvar.php'); require ('php/deletar.php');
 ?>
 			<form method="POST">
 				<input type="hidden" name="id_cad_filial" id="id_cad_filial" value="<?=$exibir_filial_php['id']?>" />
@@ -69,7 +70,7 @@
 				<input type="text" name="exibir_filial_estado<?=$exibir_filial_php['id']?>" id="exibir_filial_estado<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['estado']?>" class="Ifilial" disabled />
 				<input type="text" name="exibir_filial_cidade<?=$exibir_filial_php['id']?>" id="exibir_filial_cidade<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['cidade']?>" class="Ifilial" disabled />
 				<input type="text" name="exibir_filial_data<?=$exibir_filial_php['id']?>" id="exibir_filial_data<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['data_abertura']?>" class="Ifilial" disabled />
-				<input type="button" name="editar_filial_button<?=$exibir_filial_php['id']?>" id="editar_filial_button<?=$exibir_filial_php['id']?>" value="Editar" />
+				<input type="button" name="editar_filial_button<?=$exibir_filial_php['id']?>" id="editar_filial_button<?=$exibir_filial_php['id']?>" value="Editar" onclick="editando()" />
 				<input type="submit" name="salvar_filial_button<?=$exibir_filial_php['id']?>" id="salvar_filial_button<?=$exibir_filial_php['id']?>" class="" value="Salvar" />
 				<input type="submit" name="deletar_filial_button<?=$exibir_filial_php['id']?>" id="deletar_filial_button<?=$exibir_filial_php['id']?>" class="" value="Deletar" />
 			</form>
