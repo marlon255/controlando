@@ -26,6 +26,7 @@ input.botao_filial{
 	margin-top: 10px;
 	font-family: Agency FB;
 	font-size: 17px;
+	cursor: pointer;
 }
 /* Modelando Exibição de itens cadastrados */
 /*Fundo da exibição */
@@ -69,7 +70,9 @@ div.exibir_filial input.Ifilial{
 	width: 150px;
 	margin: 2px 1px 0px 1px;
 }
-
+input.click {
+	cursor: pointer;
+}
 
 
 

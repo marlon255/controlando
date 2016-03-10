@@ -50,7 +50,7 @@ function trazconteudo()
 	{
 		if (ajax.status==200)
 		{
-			document.getElementById('resultados').innerHTML = ajax.responseText;
+			document.getElementById('resultados').value = ajax.responseText;
 		}
 	}
 }
@@ -61,11 +61,7 @@ function trazconteudo()
 <body>
 <form id="form1" action="" method="post">
 	Busca: <input type="text" name="busca" id="busca" value="" onkeyUp="carregar()"/>
+	<input id="resultados" style="border:0px solid #CCCCCC; width:171px; position: absolute; top: 29px; left: 56px;" disabled>
 </form>
-<p>&nbsp;</p>
-Resultado da busca:
-<div id="resultados" style="border:1px solid #CCCCCC; width:200px;">
-
-</div>
 </body>
 </html>

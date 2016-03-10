@@ -67,12 +67,15 @@ div.cabecalho_exibir li{
 }
 /* INPUT's DE Exibição */
 div.exibir_descontos{
-	width: 800px;
+	width: 815px;
 	float: left;
 	margin: 1px 0px 0px 5px;
 }
 div.exibir_descontos input.Idescontos{
 	width: 150px;
-	margin-right: 2px;
+	margin: 0px 0px 0px -2px;
+}
+input.click{
+	cursor: pointer;
 }
 

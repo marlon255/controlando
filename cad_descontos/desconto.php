@@ -1,12 +1,75 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/descontos.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+    function calcular(){
+        var produto = document.getElementById("cad_desconto_valor").value;
+        var desconto = document.getElementById("cad_desconto_desconto").value;
+        var valor_final = produto - desconto;
+        document.getElementById("cad_desconto_final").value = "R$"+valor_final;
+    }
+</script>
+<script>
+//função para pegar o objeto ajax do navegador
+function xmlhttp()
+{
+	// XMLHttpRequest para firefox e outros navegadores
+	if (window.XMLHttpRequest)
+	{
+		return new XMLHttpRequest();
+	}
+
+	// ActiveXObject para navegadores microsoft
+	var versao = ['Microsoft.XMLHttp', 'Msxml2.XMLHttp', 'Msxml2.XMLHttp.6.0', 'Msxml2.XMLHttp.5.0', 'Msxml2.XMLHttp.4.0', 'Msxml2.XMLHttp.3.0','Msxml2.DOMDocument.3.0'];
+	for (var i = 0; i < versao.length; i++)
+	{
+		try
+		{
+			return new ActiveXObject(versao[i]);
+		}
+		catch(e)
+		{
+			alert("Seu navegador não possui recursos para o uso do AJAX!");
+		}
+	} // fecha for
+	return null;
+} // fecha função xmlhttp
+
+//função para fazer a requisição da página que efetuará a consulta no DB
+function carregar()
+{
+   a = document.getElementById('cad_desconto_produto').value;
+   ajax = xmlhttp();
+   if (ajax)
+   {
+	   ajax.open('get','php/exibir_valor.php?cad_desconto_produto='+a, true);
+	   ajax.onreadystatechange = trazconteudo; 
+	   ajax.send(null);
+   }
+}
+
+//função para incluir o conteúdo na pagina
+function trazconteudo()
+{
+	if (ajax.readyState==4)
+	{
+		if (ajax.status==200)
+		{
+			document.getElementById('cad_desconto_valor').value = ajax.responseText;
+		}
+	}
+}
+
+</script>
 </head>
 <body>
 <?php
-	require_once('../php/conexao.php');
-	require_once('php/exibir_produto.php');
+	include_once('../php/conexao.php');
+	include_once('php/cadastrar.php');
+	include_once('php/exibir_descontos.php');
 ?>
 	<div class="formulario_descontos">
 		<h2>Cadastro de Descontos</h2>
@@ -14,34 +77,23 @@
 			<div>
 				<div>
 				<label>Produto</label>
-				<select type="text" id="cad_desconto_produto" name="cad_desconto_produto" class="descontos_padrao">
-				<option>Selecione o Produto</option>
-				<?php
-					if($roms_produto > 0){
-						do{
-				?>
-					<option><?php echo $roms_produto['descricao']; ?></option>
-				<?php
-						}while($roms_produto = mysqli_fetch_assoc($query_produto));
-					}
-				?>
-				</select>
+				<input type="text" id="cad_desconto_produto" name="cad_desconto_produto" class="descontos_padrao" value="" onkeyUp="carregar()" />
 				</div>
 				<div>
 				<label>Valor do Produto</label>
-				<input type="text" id="cad_desconto_valor" name="cad_desconto_valor" class="descontos_padrao" />
+				<input type="text" id="cad_desconto_valor" name="cad_desconto_valor" class="descontos_padrao" disabled onblur="calcular()" />
 				</div>
 				<div>
 				<label>Valor do Desconto</label>
-				<input type="text" id="cad_desconto_desconto" name="cad_desconto_desconto" class="descontos_padrao" />
+				<input type="text" id="cad_desconto_desconto" name="cad_desconto_desconto" class="descontos_padrao" onblur="calcular()" />
 				</div>
 				<div>
 				<label>Valor Final</label>
-				<input type="text" id="cad_desconto_final" name="cad_desconto_final" class="descontos_padrao" />
+				<input type="text" id="cad_desconto_final" name="cad_desconto_final" class="descontos_padrao" disabled />
 				</div>
 			</div>
 			<div class="descontos_botao">
-				<input type="submit" id="" name="" value="Cadastrar" />
+				<input type="submit" id="cad_desconto_button" name="cad_desconto_button" class="click" value="Cadastrar" onclick="salvando()" />
 			</div>
 			
 		</form>
@@ -58,16 +110,23 @@
 			</ul>
 		</div>
 		<div class="exibir_descontos">
+<?php
+	if($exibir_descontos > 0){
+		do{
+			require('php/deletar.php');
+?>
 			<form method="POST">
-				<input type="hidden" id="id_descontos" name="id_descontos">
-				<input type="text" name="" id="" class="Idescontos" disabled />
-				<input type="text" name="" id="" class="Idescontos" disabled />
-				<input type="text" name="" id="" class="Idescontos" disabled />
-				<input type="text" name="" id="" class="Idescontos" disabled />
-				<input type="button" name="" id="" class="Bdescontos" value="Editar" />
-				<input type="submit" name="" id="" class="Bdescontos" value="Salvar" />
-				<input type="submit" name="" id="" class="Bdescontos" value="Deletar" />
+				<input type="hidden" id="id_descontos" name="id_descontos" value="<?=$exibir_descontos['id']?>">
+				<input type="text" onkeyUp="carregar_edit()" name="produto_descontos<?=$exibir_descontos['id']?>" id="produto_descontos<?=$exibir_descontos['id']?>" class="Idescontos" value="<?php echo $exibir_descontos['produto']; ?>" disabled />
+				<input type="text" name="valor_descontos<?=$exibir_descontos['id']?>" id="valor_descontos<?=$exibir_descontos['id']?>" onblur="calcular_edicao()" class="Idescontos" value="<?php echo $exibir_descontos['valor']; ?>" disabled />
+				<input type="text" name="desconto_descontos<?=$exibir_descontos['id']?>" id="desconto_descontos<?=$exibir_descontos['id']?>" onblur="calcular_edicao()" class="Idescontos" value="<?php echo $exibir_descontos['desconto']; ?>" disabled />
+				<input type="text" name="final_descontos<?=$exibir_descontos['id']?>" id="final_descontos<?=$exibir_descontos['id']?>" class="Idescontos" value="<?php echo $exibir_descontos['final']; ?>" disabled />
+				<input type="submit" name="deletar_descontos<?=$exibir_descontos['id']?>" id="deletar_descontos<?=$exibir_descontos['id']?>" class="click" value="Deletar" />
 			</form>
+<?php
+		}while($exibir_descontos = mysqli_fetch_assoc($query_exibir_descontos));
+	}
+?>
 		</div>
 	</div>
 </body>
