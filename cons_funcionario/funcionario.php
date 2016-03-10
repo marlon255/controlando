@@ -26,7 +26,26 @@
 			</div>
 		</form>
 	</div>
-	<div>
+	<script>
+$(function(){ 
+
+  $("#consulta_funcionario_nome").keyup(function(){
+    var texto = $(this).val();
+    
+    $("#buscando<?=$exibir_consulta_funcionario['id']?>").each(function(){
+      var resultado = $(this).text().toUpperCase().indexOf(' '+texto.toUpperCase());
+      
+      if(resultado < 0) {
+        $(this).fadeOut();
+      }else {
+        $(this).fadeIn();
+      }
+    }); 
+
+  });
+
+});
+</script>
 	<div class="fundo_consulta_funcionario">
 		<div class="cabecalho_exibir">
 			<ul>
@@ -46,7 +65,7 @@
 	if($exibir_consulta_funcionario > 0){
 		do{
 ?>
-			<form method="POST">
+			<form method="POST" id="buscando<?=$exibir_consulta_funcionario['id']?>">
 				<input type="hidden" id="id_descontos" name="id_consulta_funcionario" value="<?=$exibir_consulta_funcionario['id']?>">
 				<input type="text" name="funcionario_nome<?=$exibir_consulta_funcionario['id']?>" id="funcionario_nome<?=$exibir_consulta_funcionario['id']?>" class="Iconsulta_funcionario" value="<?=$exibir_consulta_funcionario['nome']?>" disabled />
 				<input type="text" name="funcionario_cargo<?=$exibir_consulta_funcionario['id']?>" id="funcionario_cargo<?=$exibir_consulta_funcionario['id']?>" class="Iconsulta_funcionario" value="<?=$exibir_consulta_funcionario['cargo']?>" disabled />
