@@ -1,4 +1,4 @@
-﻿/* Modelando Formulario de cadastro */
+/* Modelando Formulario de cadastro */
 div.formulario_consulta_funcionario{
 	font-family: Agency FB;
 }
@@ -21,7 +21,7 @@ form.consulta_funcionario div div{
 	margin-right: 15px;
 	padding-bottom: 10px;
 }
-select.consulta_funcionario_padrao{
+input.consulta_funcionario_padrao{
 	width: 150px;
 	border-radius: 2px;
 	border: 1px groove rgba(0,0,0,0.6);
@@ -66,6 +66,9 @@ div.exibir_consulta_funcionario{
 	width: 1450px;
 	float: left;
 	margin: 1px 0px 0px 5px;
+}
+div.exibir_consulta_funcionario form{
+	margin: 0px;
 }
 div.exibir_consulta_funcionario input.Iconsulta_funcionario{
 	width: 150px;
