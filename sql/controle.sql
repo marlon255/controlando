@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 07-Mar-2016 às 20:07
+-- Generation Time: 14-Mar-2016 às 10:37
 -- Versão do servidor: 5.6.20-log
 -- PHP Version: 5.4.31
 
@@ -23,6 +23,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `descontos`
+--
+
+CREATE TABLE IF NOT EXISTS `descontos` (
+`id` int(15) NOT NULL,
+  `produto` varchar(35) NOT NULL,
+  `valor` varchar(35) NOT NULL,
+  `desconto` varchar(35) NOT NULL,
+  `final` varchar(35) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Extraindo dados da tabela `descontos`
+--
+
+INSERT INTO `descontos` (`id`, `produto`, `valor`, `desconto`, `final`) VALUES
+(3, 'cordao', '52.00', '25', 'R$27'),
+(6, 'calca', '10', '5', 'R$5');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `filial`
 --
 
@@ -34,14 +56,14 @@ CREATE TABLE IF NOT EXISTS `filial` (
   `estado` varchar(25) NOT NULL,
   `cidade` varchar(35) NOT NULL,
   `data_abertura` varchar(25) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Extraindo dados da tabela `filial`
 --
 
 INSERT INTO `filial` (`id`, `cnpj`, `nome_fantas`, `nume_filial`, `estado`, `cidade`, `data_abertura`) VALUES
-(9, 's', 's', 's', 's', 's', 's');
+(9, 'ssss', 's', 's', 's', 's', 's2');
 
 -- --------------------------------------------------------
 
@@ -113,19 +135,29 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `tamanho` varchar(35) NOT NULL,
   `estoque` varchar(35) NOT NULL,
   `preco` varchar(35) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Extraindo dados da tabela `produto`
 --
 
 INSERT INTO `produto` (`id`, `codigo`, `descricao`, `marca`, `cor`, `tamanho`, `estoque`, `preco`) VALUES
-(1, '1', '1', '1', '1', '1', '1', '1'),
-(2, 'a', 'a', 'a', 'a', 'a', 'a', 'a');
+(1, '1', 'camisa', '1', '1', '1', '1', '5'),
+(2, 'a', 'calça', 'a', 'a', 'a', 'a', '10'),
+(3, '1', 'blusa', '1', '1', '1', '1', '15'),
+(4, 'a', 'short', 'a', 'a', 'a', 'a', '20'),
+(5, '8', 'cordao', 'marca', 'preto', 'grande', '1', '52.00'),
+(6, '', '', '', '', '', '', '10.50');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `descontos`
+--
+ALTER TABLE `descontos`
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `filial`
@@ -156,10 +188,15 @@ ALTER TABLE `produto`
 --
 
 --
+-- AUTO_INCREMENT for table `descontos`
+--
+ALTER TABLE `descontos`
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
 -- AUTO_INCREMENT for table `filial`
 --
 ALTER TABLE `filial`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `fornecedor`
 --
@@ -174,7 +211,7 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
