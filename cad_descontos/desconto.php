@@ -8,8 +8,11 @@
     function calcular(){
         var produto = document.getElementById("cad_desconto_valor").value;
         var desconto = document.getElementById("cad_desconto_desconto").value;
-        var valor_final = produto - desconto;
-        document.getElementById("cad_desconto_final").value = "R$"+valor_final;
+		var desconto_new = desconto.replace(",", ".");
+        var valor_final = produto - desconto_new;
+        var x = document.getElementById("cad_desconto_final").value = "R$"+valor_final;
+		var y = x.replace(".", ",");
+		document.getElementById("cad_desconto_final").value = y;
     }
 </script>
 <script>
@@ -64,6 +67,12 @@ function trazconteudo()
 }
 
 </script>
+<script>
+function mudar(){
+	var valor_new = document.getElementById("cad_desconto_valor").value;
+	document.getElementById("cad_desconto_valor_new").value = "R$"+valor_new+",00";
+}
+</script>
 </head>
 <body>
 <?php
@@ -77,11 +86,12 @@ function trazconteudo()
 			<div>
 				<div>
 				<label>Produto</label>
-				<input type="text" id="cad_desconto_produto" name="cad_desconto_produto" class="descontos_padrao" value="" onkeyUp="carregar()" />
+				<input type="text" id="cad_desconto_produto" name="cad_desconto_produto" class="descontos_padrao" value="" onkeyUp="carregar()" onblur="mudar()" />
 				</div>
 				<div>
 				<label>Valor do Produto</label>
-				<input type="text" id="cad_desconto_valor" name="cad_desconto_valor" class="descontos_padrao" disabled onblur="calcular()" />
+				<input type="text" id="cad_desconto_valor" name="cad_desconto_valor" class="descontos_padrao" value="" style="display: none;" />
+				<input type="text" id="cad_desconto_valor_new" name="cad_desconto_valor_new" class="descontos_padrao" value="" disabled />
 				</div>
 				<div>
 				<label>Valor do Desconto</label>

@@ -38,7 +38,7 @@
 				</div>
 				<div>
 				<label>Preço de Venda</label>
-				<input type="text" id="cad_produto_preco" name="cad_produto_preco" class="produto_padrao" />
+				<input type="text" id="cad_produto_preco" name="cad_produto_preco" class="produto_padrao" Value="R$" />
 				</div>
 			</div>
 			<div class="produto_botao">

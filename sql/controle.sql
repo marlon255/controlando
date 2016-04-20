@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 14-Mar-2016 às 10:37
+-- Generation Time: 20-Abr-2016 às 12:12
 -- Versão do servidor: 5.6.20-log
 -- PHP Version: 5.4.31
 
@@ -32,15 +32,7 @@ CREATE TABLE IF NOT EXISTS `descontos` (
   `valor` varchar(35) NOT NULL,
   `desconto` varchar(35) NOT NULL,
   `final` varchar(35) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
-
---
--- Extraindo dados da tabela `descontos`
---
-
-INSERT INTO `descontos` (`id`, `produto`, `valor`, `desconto`, `final`) VALUES
-(3, 'cordao', '52.00', '25', 'R$27'),
-(6, 'calca', '10', '5', 'R$5');
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 -- --------------------------------------------------------
 
@@ -135,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `tamanho` varchar(35) NOT NULL,
   `estoque` varchar(35) NOT NULL,
   `preco` varchar(35) NOT NULL
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Extraindo dados da tabela `produto`
@@ -146,8 +138,8 @@ INSERT INTO `produto` (`id`, `codigo`, `descricao`, `marca`, `cor`, `tamanho`, `
 (2, 'a', 'calça', 'a', 'a', 'a', 'a', '10'),
 (3, '1', 'blusa', '1', '1', '1', '1', '15'),
 (4, 'a', 'short', 'a', 'a', 'a', 'a', '20'),
-(5, '8', 'cordao', 'marca', 'preto', 'grande', '1', '52.00'),
-(6, '', '', '', '', '', '', '10.50');
+(5, '8', 'cordao', 'marca', 'preto', 'grande', '1', '52'),
+(7, '1', '123', '123', '213', '321', '12', '1');
 
 --
 -- Indexes for dumped tables
@@ -191,7 +183,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT for table `descontos`
 --
 ALTER TABLE `descontos`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `filial`
 --
@@ -211,7 +203,7 @@ MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `produto`
 --
 ALTER TABLE `produto`
-MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,6 +1,6 @@
 <script>
 $().ready(function salvando() {
-	var valor = "#cad_desconto_valor";
+	var valor = "#cad_desconto_valor_new";
 	var var_final = "#cad_desconto_final";
 	
     $('#cad_desconto_button').click(function() {
@@ -32,7 +32,7 @@ $().ready(function salvando() {
 <?php
 	if(isset($_POST['cad_desconto_button'])){
 		$produto = $_POST['cad_desconto_produto'];
-		$valor = $_POST['cad_desconto_valor'];
+		$valor = $_POST['cad_desconto_valor_new'];
 		$desconto = $_POST['cad_desconto_desconto'];
 		$final = $_POST['cad_desconto_final'];
 		
