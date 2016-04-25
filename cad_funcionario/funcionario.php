@@ -11,6 +11,10 @@
 ?>
 	<div class="formulario_funcionario">
 		<h2>Cadastro de Funcionário</h2>
+		<div id="loc_funcionario" name="loc_funcionario">
+		Localizar Funcionário
+		</div>
+		<div>
 		<form method="POST" class="cadastro_funcionario">
 			<div>
 				<div>
@@ -64,6 +68,7 @@
 			<input type="submit" name="cad_funcionario_button" id="cad_funcionario_button" value="Cadastrar" />
 			</div>
 		</form>
+		</div>
 	</div>
 </body>
 </html>
