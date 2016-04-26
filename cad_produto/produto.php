@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/produto.css">
-<script src="../js/func_moeda.js"></script>
+<script src="../js/jquery.min.js"></script>
 <script src="../js/moeda.js"></script>
 <script src="js/funcoes.js"></script>
 </head>
