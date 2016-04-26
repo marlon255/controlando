@@ -1,5 +1,6 @@
 ﻿div.formulario_funcionario{
 	font-family: Agency FB;
+	margin: 50px 0px 0px 0px;
 }
 div.formulario_funcionario h2{
 	margin-left: 100px;
@@ -34,7 +35,6 @@ div.funcionario_botao{
 	margin-top: 10px;
 	font-family: Agency FB;
 	font-size: 17px;
-	float: left;
 }
 div#loc_funcionario{
 	width: 75px;
@@ -44,7 +44,8 @@ div#loc_funcionario{
 	margin-top: 35px;
 	padding: 40px 0px 0px 0px;
 	background: rgb(165,165,165);
-	border: 0px solid #000;
+	border: 2px solid rgb(105,105,105);
+	border-radius: 2px;
 	cursor: pointer;
 	text-align: center;
 	background-image: url(../../img/lupa.png);
@@ -59,4 +60,82 @@ div#loc_funcionario:hover{
 	background-position: top center;
 	background-size: 35px 35px;
 	border: 0px solid #FE0;
+	border: 2px solid rgb(105,105,105);
+	border-radius: 2px;
+}
+div#popup_loc_func{
+	width: 800px;
+	height: 500px;
+	position: absolute;
+	z-index:100;
+	top: 5%;
+	left: 30px;
+	border-radius: 2px;
+	border: 4px solid rgb(105,105,105);
+	display: none;
+}
+div#loc_func_title{
+	width: 800px;
+	height: 25px;
+	border: 0px solid #000;
+	float: left;
+	background: #1E90FF;
+	color: #FFF;
+}
+div#loc_func_textop{
+	width: 775px;
+	height: 25px;
+	border: 0px solid #000;
+	text-align: top;
+	float: left;
+	padding: 0px;
+}
+div#loc_func_textop span{
+	font-size: 20px;
+	vertical-align: text-bottom;
+}
+div#loc_func_exit{
+	width: 25px;
+	height: 25px;
+	border: 0px solid #000;
+	float: left;
+	vertical-align: text-bottom;
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+	background-image: url(../../img/close-hi.png);
+	background-repeat: no-repeat;
+	background-size: 20px 20px;
+	background-position: center;
+}
+div#loc_func_body{
+	width: 800px;
+	height: 475px;
+	border: 0px solid #000;
+	float: left;
+	background: #FFF;
+}
+input.Bconsulta_funcionario{
+	width: 70px;
+	height: 25px;
+	float: left;
+	margin-right: 5px;
+	text-align: right;
+	border-radius: 2px;
+	border: 1px groove rgba(0,0,0,0.6);
+	background-color: buttonface;
+	padding-left: 3px;
+	cursor: pointer;
+}
+input#salvar_funcionario{
+	background-image: url(../../img/save.png);
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: left 3px center;
+}
+input#excluir_funcionario{
+	background-image: url(../../img/delete.png);
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: left 3px center;
 }

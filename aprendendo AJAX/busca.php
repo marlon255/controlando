@@ -1,5 +1,5 @@
 <?php
-	$conn = mysqli_connect("localhost","root","Marlonbreno1", "controle");
+	$conn = mysqli_connect("localhost","root","root", "controle");
 	
 	$busca = $_GET['busca'];
 

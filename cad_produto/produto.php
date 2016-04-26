@@ -2,6 +2,9 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/produto.css">
+<script src="../js/func_moeda.js"></script>
+<script src="../js/moeda.js"></script>
+<script src="js/funcoes.js"></script>
 </head>
 <body>
 <?php 
@@ -38,7 +41,7 @@
 				</div>
 				<div>
 				<label>Preço de Venda</label>
-				<input type="text" id="cad_produto_preco" name="cad_produto_preco" class="produto_padrao" Value="R$" />
+				<input type="text" id="cad_produto_preco" name="cad_produto_preco" class="produto_padrao" Value="R$0,00" />
 				</div>
 			</div>
 			<div class="produto_botao">
