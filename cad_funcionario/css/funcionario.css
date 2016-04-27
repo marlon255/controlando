@@ -36,6 +36,27 @@ div.funcionario_botao{
 	font-family: Agency FB;
 	font-size: 17px;
 }
+/* CSS PARA O MODEL */
+/* O z-index do div#mask deve ser menor que do div#boxes e do div.window */
+#mask {
+position:absolute;
+top: 0px;
+z-index:1000;  
+background-color:#000; 
+display:none;
+}
+/* PERSONALIZE SUA JANELA MODAL AQUI */
+#boxes .window {
+position:absolute;
+width:750px;
+height:500px;
+display:none;
+z-index:2000;
+padding:5px;
+background: #FFF;
+border-radius: 2px;
+border: 4px solid rgb(105,105,105);
+}
 div#loc_funcionario{
 	width: 75px;
 	height: 40px;
@@ -52,6 +73,7 @@ div#loc_funcionario{
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 35px 35px;
+	color: #FFF;
 }
 div#loc_funcionario:hover{
 	background: #1E90FF;
@@ -63,27 +85,24 @@ div#loc_funcionario:hover{
 	border: 2px solid rgb(105,105,105);
 	border-radius: 2px;
 }
-div#popup_loc_func{
-	width: 800px;
-	height: 500px;
-	position: absolute;
-	z-index:100;
-	top: 5%;
-	left: 30px;
-	border-radius: 2px;
-	border: 4px solid rgb(105,105,105);
-	display: none;
+/* posiciona o link para fechar a janela */
+.close {
+display:block; 
+text-align:right;
 }
+/* CSS PARA ESTILIZAÇÃO DAS DIV DO MODEL */
 div#loc_func_title{
-	width: 800px;
+	width: 746px;
 	height: 25px;
 	border: 0px solid #000;
 	float: left;
 	background: #1E90FF;
 	color: #FFF;
+	padding-left: 5px;
+	border-radius: 2px;
 }
 div#loc_func_textop{
-	width: 775px;
+	width: 720px;
 	height: 25px;
 	border: 0px solid #000;
 	text-align: top;
@@ -109,11 +128,7 @@ div#loc_func_exit{
 	background-position: center;
 }
 div#loc_func_body{
-	width: 800px;
-	height: 475px;
-	border: 0px solid #000;
-	float: left;
-	background: #FFF;
+	margin-top: 40px;
 }
 input.Bconsulta_funcionario{
 	width: 70px;
@@ -138,4 +153,9 @@ input#excluir_funcionario{
 	background-repeat: no-repeat;
 	background-size: 16px 16px;
 	background-position: left 3px center;
+}
+ul.ui-autocomplete{
+	width: 147px;
+	padding:0px;
+	z-index: 3000;
 }

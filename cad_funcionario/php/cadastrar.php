@@ -14,3 +14,8 @@
 		$query_cad_funcionario = mysqli_query($conexao, $sql_cad_funcionario) or die (mysqli_error($conexao));
 	}
 ?>
+<?php
+	$sql = "SELECT * FROM filial ORDER BY id ASC";
+	$query = mysqli_query($conexao, $sql);
+	$exibir = mysqli_fetch_assoc($query);
+?>
