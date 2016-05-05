@@ -4,6 +4,18 @@
 <title>Controle de Estoque</title>
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 <link rel="stylesheet" type="text/css" href="css/estilo.css">
+<link rel="stylesheet" type="text/css" href="css/funcionario.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".bt_url").click(function(){
+        $("#iframe").load($(this).data("url"));
+    });
+});
+</script>
 </head>
 <body>
 	<div class="cabecalho">
@@ -21,9 +33,9 @@
 				<li class="menu_item">Cadastro
 					<ul class="sub_menu">
 						<li>&#8628;</li>
-						<a href="cad_filial/filial.php" target="iframe"><li class="sub_menu_item">Filial</li></a>
-						<a href="cad_funcionario/funcionario.php" target="iframe"><li class="sub_menu_item">Funcionarios</li></a>
-						<a href="cad_fornecedor/fornecedor.php" target="iframe"><li class="sub_menu_item">Fornecedores</li></a>
+						<a class="bt_url" data-url="cad_filial/filial.php"><li class="sub_menu_item">Filial</li></a>
+						<a class="bt_url" data-url="funcionario/funcionario.php"><li class="sub_menu_item">Funcionarios</li></a>
+						<a class="bt_url" data-url="cad_fornecedor/fornecedor.php"><li class="sub_menu_item">Fornecedores</li></a>
 						<a href="cad_produto/produto.php" target="iframe"><li class="sub_menu_item">Produtos</li></a>
 						<a href="cad_cliente/cliente.php" target="iframe"><li class="sub_menu_item">Clientes</li></a>
 						<a href="cad_descontos/desconto.php" target="iframe"><li class="sub_menu_item">Descontos</li></a>
@@ -49,7 +61,7 @@
 			</ul>
 		</nav>
 	</div>
-	<iframe id="iframe" name="iframe"></iframe>
+	<div id="iframe" name="iframe"></div>
 	<div class="rodape">
 		<h1>Criado por Marlon Breno Gera</h1>
 		<h2><a href="http://www.facebook.com/MarlonBrenoGera" target="_blank">Facebook</a></h2>
