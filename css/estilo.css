@@ -58,7 +58,7 @@ div.img_user{
 	background-size: 55px 55px;
 }
 /* Modelando IFRAME */
-iframe{
+div#iframe{
 	height: 700px;
 	width: 900px;
 	margin: 0px 0px 15px 200px;
@@ -66,6 +66,7 @@ iframe{
 	-webkit-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
 	-moz-box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
 	box-shadow: 3px 3px 2px 0px rgba(135,135,135,0.5);
+
 }
 
 

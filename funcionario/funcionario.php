@@ -20,7 +20,7 @@
 		<div id="loc_funcionario" name="loc_funcionario">Localizar Funcionário</div>
 		</a>
 		<!-- DIV MODEL PARA LOCALIZAR FUNCIONÁRIO -->
-		<div id="boxes" name="popup_loc_func" class="popup_loc_func">
+		<div id="boxes" name="popup_loc_func" class="popup_loc_func" style="">
 			<div id="dialog" class="window">
 				<!-- DIV DO TITULO DO MODEL -->
 				<div id="loc_func_title" name="loc_func_title">

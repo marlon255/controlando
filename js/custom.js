@@ -75,14 +75,6 @@
        }
     }
 });
-/*function popup_func(){
-		document.getElementById('div_fundo_popup').style.display='block';
-		document.getElementById('popup_loc_func').style.display='block';
-	}
-function close_popup(){
-		document.getElementById('div_fundo_popup').style.display='none';
-		document.getElementById('popup_loc_func').style.display='none';
-	}*/
 $(document).ready(function() {
 
 //seleciona os elementos a com atributo name="modal"
