@@ -8,10 +8,9 @@ h4{
 	margin: 0;
 	padding: 0;
 }
-nav.menu_lateral{
-	height: 100px;
+div.conteudo{
+	height: 600px;
 	width: 150px;
-	display: block;
 	float: left;
 }
 nav.menu_lateral ul{

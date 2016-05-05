@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
+<!--<script type="text/javascript" src="js/custom.js"></script>-->
 <script type="text/javascript">
 $(document).ready(function(){
 	$(".bt_url").click(function(){
@@ -18,9 +18,13 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<?php
+	include_once ('php/conexao.php');
+	include_once ('php/cadastrar.php');
+?>
 	<div class="cabecalho">
 		<div class="logo"></div>
-		<div class="topo_cabecalho">Mercadinho</div>
+		<div class="topo_cabecalho"><i>Mercadinho Irmãos Fydellys</i></div>
 		<div class="user">
 			<div class="img_user"></div>
 			<div class="info_user">Informações do Usuario Online</div>
@@ -61,10 +65,10 @@ $(document).ready(function(){
 			</ul>
 		</nav>
 	</div>
-	<div id="iframe" name="iframe"></div>
+	<div id="iframe" name="iframe"><?php include_once('php/home.php'); ?></div>
 	<div class="rodape">
-		<h1>Criado por Marlon Breno Gera</h1>
-		<h2><a href="http://www.facebook.com/MarlonBrenoGera" target="_blank">Facebook</a></h2>
+		<h1>Criado por</h1>
+		<h2><a href="http://www.facebook.com/MarlonBrenoGera" target="_blank">Marlon Breno Gera</a></h2>
 	</div>
 </body>
 </html>

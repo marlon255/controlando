@@ -14,8 +14,7 @@ form.cadastro_funcionario{
 	height: 200px;
 	margin: 10px auto 10px auto;
 }
-
-form.cadastro_funcionario div div{
+div.div_funcionario{
 	width: 150px;
 	float: left;
 	margin-right: 15px;
@@ -74,7 +73,7 @@ div#loc_funcionario{
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 35px 35px;
-	color: #FFF;
+	color: #000;
 }
 div#loc_funcionario:hover{
 	background: #1E90FF;
@@ -85,6 +84,8 @@ div#loc_funcionario:hover{
 	border: 0px solid #FE0;
 	border: 2px solid rgb(105,105,105);
 	border-radius: 2px;
+	color: #FFF;
+	transition: background 2s;
 }
 /* posiciona o link para fechar a janela */
 .close {
@@ -143,6 +144,11 @@ input.Bconsulta_funcionario{
 	padding-left: 3px;
 	cursor: pointer;
 }
+input#cad_funcionario_button:hover{
+	background-color: #1E90EE;
+	color: #FFF;
+    transition: background-color 2s;
+}
 input#salvar_funcionario{
 	background-image: url(../img/save.png);
 	background-repeat: no-repeat;
@@ -173,4 +179,53 @@ ul.ui-autocomplete{
 	width: 147px;
 	padding:0px;
 	z-index: 3000;
+}
+.onoffswitch {
+    position: relative;
+	width: 104px;
+    -webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select: none;
+	margin-top: 19px;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 14px; padding: 0; line-height: 14px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ATIVO";
+    padding-left: 10px;
+    background-color: #1175B8; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "DESATIVO";
+    padding-right: 10px;
+    background-color: #A3A3A3; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 13px; margin: 0.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 86px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
 }

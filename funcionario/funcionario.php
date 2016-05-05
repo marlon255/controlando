@@ -1,17 +1,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/funcionario.css">
-<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
-<script type="text/javascript" src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<!--
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
 <script type="text/javascript" src="js/custom.js"></script>
 </head>
 <body>
 <?php
 	include_once ('../php/conexao.php');
 	include_once ('../cad_filial/php/exibir.php');
-	include_once ('php/cadastrar.php');
 ?>
 	<div class="formulario_funcionario">
 		<h2>Cadastro de Funcionário</h2>
@@ -32,15 +31,15 @@
 				<div id="loc_func_body" name="loc_func_body">
 				<form method="POST" id="buscando" class="cadastro_funcionario">
 				<div>
-					<div>
+					<div class="div_funcionario">
 						<label>Nome Completo</label>
 						<input type="text" name="funcionario_name" id="funcionario_name" class="funcionario_padrao" />
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Cargo</label>
 						<input type="text" name="funcionario_cargo" id="funcionario_cargo" class="funcionario_padrao" />
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Nível de Permissão</label>
 							<select name="funcionario_nivel" id="funcionario_nivel" class="funcionario_padrao">
 								<option></option>
@@ -49,19 +48,19 @@
 								<option value="3">Administrador</option>
 							</select>
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>CPF</label>
 						<input type="text" name="funcionario_cpf" id="funcionario_cpf" class="funcionario_padrao" />
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Telefone</label>
 						<input type="text" name="funcionario_telefone" id="funcionario_telefone" class="funcionario_padrao" />
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Endereço</label>
 						<input type="text" name="funcionario_endereco" id="funcionario_endereco" class="funcionario_padrao" />
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Filial Empregado</label>
 							<select name="funcionario_filial" id="funcionario_filial" class="funcionario_padrao">
 							<option></option>
@@ -76,9 +75,16 @@
 							?>
 							</select>
 					</div>
-					<div>
+					<div class="div_funcionario">
 						<label>Data de Admissão</label>
 						<input type="text" name="funcionario_data" id="funcionario_data" class="funcionario_padrao" />
+					</div>
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
 					</div>
 				</div>
 				<div>
@@ -95,15 +101,15 @@
 		<div>
 		<form method="POST" class="cadastro_funcionario">
 			<div>
-				<div>
+				<div class="div_funcionario">
 				<label>Nome Completo</label>
 				<input type="text" name="cad_funcionario_name" id="cad_funcionario_name" class="funcionario_padrao" />
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Cargo</label>
 				<input type="text" name="cad_funcionario_cargo" id="cad_funcionario_cargo" class="funcionario_padrao" />
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Nível de Permissão</label>
 					<select name="cad_funcionario_nivel" id="cad_funcionario_nivel" class="funcionario_padrao">
 						<option value="1">Basico</option>
@@ -111,19 +117,19 @@
 						<option value="3">Administrador</option>
 					</select>
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>CPF</label>
 				<input type="text" name="cad_funcionario_cpf" id="cad_funcionario_cpf" class="funcionario_padrao" />
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Telefone</label>
 				<input type="text" name="cad_funcionario_telefone" id="cad_funcionario_telefone" class="funcionario_padrao" />
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Endereço</label>
 				<input type="text" name="cad_funcionario_endereco" id="cad_funcionario_endereco" class="funcionario_padrao" />
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Filial Empregado</label>
 					<select name="cad_funcionario_filial" id="cad_funcionario_filial" class="funcionario_padrao">
 					<?php
@@ -137,13 +143,14 @@
 					?>
 					</select>
 				</div>
-				<div>
+				<div class="div_funcionario">
 				<label>Data de Admissão</label>
 				<input type="text" name="cad_funcionario_data" id="cad_funcionario_data" class="funcionario_padrao" />
 				</div>
+				<input type="hidden" name="cad_funcionario_status" id="cad_funcionario_status" class="funcionario_padrao" />
 			</div>
 			<div class="funcionario_botao">
-			<input type="submit" name="cad_funcionario_button" id="cad_funcionario_button" value="Cadastrar" />
+			<input type="submit" name="cad_funcionario_button" id="cad_funcionario_button" value="Cadastrar" class="Bconsulta_funcionario" />
 			</div>
 		</form>
 		</div>
