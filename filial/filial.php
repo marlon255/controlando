@@ -1,14 +1,6 @@
-<html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="css/filial.css">
-<script src="../js/jquery.min.js"></script>
-</head>
-<body>
 <?php
-	include_once ('../php/conexao.php');
-	include_once ('php/cadastrar.php');
-	include_once ('php/exibir.php');
+include('../view/header.php');
+include('../view/menu.php');
 ?>
 	<div class="formulario_filial">
 		<h2>Filiais</h2>
@@ -40,7 +32,6 @@
 			<input type="submit" name="botao_filial" id="botao_filial" class="botao_filial" />
 		</form>
 	</div>
-	<div>
 	<div class="fundo_filial">
 		<div class="cabecalho_exibir">
 			<ul>
@@ -58,9 +49,89 @@
 	if($exibir_filial_php > 0){
 		do{
 ?>
-<?php
-		require('php/salvar.php'); require('php/deletar.php'); require('php/editar.php');
-?>
+<script>
+$().ready(function editando() {
+	var cnpj = "#exibir_filial_cnpj<?=$exibir_filial_php['id']?>";
+	var fantasia = "#exibir_filial_fantasia<?=$exibir_filial_php['id']?>";
+	var numero = "#exibir_filial_numero<?=$exibir_filial_php['id']?>";
+	var estado = "#exibir_filial_estado<?=$exibir_filial_php['id']?>";
+	var cidade = "#exibir_filial_cidade<?=$exibir_filial_php['id']?>";
+	var data = "#exibir_filial_data<?=$exibir_filial_php['id']?>";
+	
+    $('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(cnpj).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+	$('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(fantasia).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+	$('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(numero).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+	$('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(estado).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+	$('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(cidade).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+	$('#editar_filial_button<?=$exibir_filial_php['id']?>').click(function() {
+        $(data).each(function() {
+            if ($(this).attr('disabled')) {
+                $(this).removeAttr('disabled');
+            }
+            else {
+                $(this).attr({
+                    'disabled': 'disabled'
+                });
+            }
+        });
+    });
+});
+</script>
 			<form method="POST">
 				<input type="hidden" name="id_cad_filial" id="id_cad_filial" value="<?=$exibir_filial_php['id']?>" />
 				<input type="text" name="exibir_filial_cnpj<?=$exibir_filial_php['id']?>" id="exibir_filial_cnpj<?=$exibir_filial_php['id']?>" value="<?=$exibir_filial_php ['cnpj']?>" class="Ifilial" disabled />
@@ -79,5 +150,4 @@
 ?>
 		</div>
 	</div>
-</body>
-</html>
+<?php include('../view/rodape.php');?>

@@ -1,17 +1,8 @@
-<html>
-<head>
-<meta charset="utf-8">
-<!--
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>-->
-<script type="text/javascript" src="js/custom.js"></script>
-</head>
-<body>
 <?php
-	include_once ('../php/conexao.php');
-	include_once ('../cad_filial/php/exibir.php');
+include('../view/header.php');
+include('../view/menu.php');
 ?>
+<div id="iframe" name="iframe">
 	<div class="formulario_funcionario">
 		<h2>Cadastro de Funcionário</h2>
 		<!-- BOTÃO PARA CHAMAR O POPUP DE FUNCIONÁRIO -->
@@ -155,5 +146,6 @@
 		</form>
 		</div>
 	</div>
+</div>
 </body>
 </html>
